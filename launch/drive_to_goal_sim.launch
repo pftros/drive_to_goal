@@ -1,0 +1,6 @@
+<launch>
+  <include file="$(find drive_to_goal)/launch/stage_sim.launch"/>
+  <node pkg="drive_to_goal" type="drive_to_goal.py" name="drive_to_goal">
+    <remap from="pose" to="base_pose_ground_truth"/>
+  </node>
+</launch>
