@@ -1,0 +1,7 @@
+<launch>
+<node pkg="stage_ros" type="stageros" name="stage_ros" args="$(find rps_stage_worlds)/worlds/simple_rps.world"/>
+<node type="map_server" name="map_server" pkg="map_server" args="_frame_id:='odom' $(find rps_stage_worlds)/worlds/bitmaps/simple_rooms.yaml" />
+<node type="rviz" name="rviz" pkg="rviz" args="-d $(find drive_to_goal)/rviz/simple_rps.rviz" />
+
+
+</launch>
